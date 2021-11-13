@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* animaion */
+        
+        @keyframes 얼굴 {
+            0% {
+                transform: scale(0.8);
+            }
+            25% {
+                transform: scale(1.2) rotate(20deg);
+            }
+            50% {
+                transform: scale(0.8) rotate(0deg);
+            }
+            75% {
+                transform: scale(1.2) rotate(-20deg);
+            }
+            100% {
+                transform: scale(0.8) rotate(0deg);
+            }
+        }
+        
+        @keyframes 귀오른쪽 {
+            from {
+                transform: rotate(30deg);
+            }
+            to {
+                transform: rotate(40deg) translateX(10px);
+            }
+        }
+        
+        @keyframes 귀왼쪽 {
+            from {
+                transform: rotate(-30deg);
+            }
+            to {
+                transform: rotate(-40deg) translateX(-10px);
+            }
+        }
+        
+        @keyframes 입 {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+        
+        @keyframes 홍조 {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1.4);
+            }
+        }
+        
+        @keyframes 머리카락 {
+            from {
+                transform: translateX(-43%) rotate(0deg);
+            }
+            to {
+                transform: translateX(-44%) rotate(5deg);
+            }
+        }
+        /* setting */
+        
+         :root {
+            --pri: #CE705F;
+            --sec: #ECD376;
+        }
+        /* reset */
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* layout */
+        /* design */
+        
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: rebeccapurple;
+        }
+        
+        .muzi {
+            position: relative;
+            top: 100px;
+            margin: 50px auto;
+            width: 400px;
+            height: 380px;
+            animation: 얼굴 3s infinite alternate;
+        }
+        
+        .face {
+            position: absolute;
+            width: 290px;
+            height: 270px;
+            top: 110px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border: 10px solid #333;
+            border-radius: 90% 90% 100% 100% / 100% 100% 100% 100%;
+            background: #fff;
+            z-index: 2;
+        }
+        
+        .face-inner {
+            position: absolute;
+            width: 255px;
+            height: 230px;
+            top: 130px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border: 10px solid #333;
+            border-radius: 90% 90% 100% 100% / 100% 100% 100% 100%;
+            background: #fbd400;
+            z-index: 3;
+        }
+        
+        .ear-left {
+            position: absolute;
+            width: 50px;
+            height: 120px;
+            left: 80px;
+            top: 20px;
+            border: solid 10px #333;
+            border-radius: 40px;
+            transform: rotate(-25deg);
+            background: #fff;
+            z-index: 1;
+        }
+        
+        .ear-left-inner {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            left: 100px;
+            top: 40px;
+            border: solid 8px #333;
+            border-radius: 20px;
+            transform: rotate(-25deg);
+            background: #e88388;
+            z-index: 2;
+        }
+        
+        .ear-right {
+            position: absolute;
+            width: 50px;
+            height: 140px;
+            right: 100px;
+            top: 5px;
+            border: solid 10px #333;
+            border-radius: 40px;
+            transform: rotate(10deg);
+            background: #fff;
+            z-index: 1;
+        }
+        
+        .ear-right-inner {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            right: 117px;
+            top: 25px;
+            border: solid 8px #333;
+            border-radius: 20px;
+            transform: rotate(10deg);
+            background: #e88388;
+            z-index: 1;
+        }
+        
+        .eye-left {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 205px;
+            left: 110px;
+            border-radius: 100%;
+            background: #333;
+            z-index: 5;
+        }
+        
+        .eye-left-brush1 {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 195px;
+            left: 120px;
+            background: #333;
+            border-radius: 5px;
+            transform: rotate(-30deg);
+            z-index: 3;
+        }
+        
+        .eye-left-brush2 {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 190px;
+            left: 140px;
+            background: #333;
+            border-radius: 5px;
+            z-index: 3;
+        }
+        
+        .eye-left-brush3 {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 195px;
+            left: 160px;
+            background: #333;
+            border-radius: 5px;
+            transform: rotate(30deg);
+            z-index: 3;
+        }
+        
+        .eye-left-1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 220px;
+            left: 120px;
+            background: #fff;
+            border-radius: 100%;
+            z-index: 6;
+        }
+        
+        .eye-left-2 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 225px;
+            left: 150px;
+            background: #fff;
+            border-radius: 100%;
+            z-index: 6;
+        }
+        
+        .eye-left-3 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 247px;
+            left: 137px;
+            background: #fff;
+            border-radius: 100%;
+            z-index: 6;
+        }
+        
+        .eye-right {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 205px;
+            right: 120px;
+            border-radius: 100%;
+            background: #333;
+            z-index: 5;
+        }
+        
+        .eye-right-brush1 {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 195px;
+            right: 120px;
+            background: #333;
+            border-radius: 5px;
+            transform: rotate(30deg);
+            z-index: 3;
+        }
+        
+        .eye-right-brush2 {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 190px;
+            right: 140px;
+            background: #333;
+            border-radius: 5px;
+            z-index: 3;
+        }
+        
+        .eye-right-brush3 {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            top: 195px;
+            right: 160px;
+            background: #333;
+            border-radius: 5px;
+            transform: rotate(-30deg);
+            z-index: 5;
+        }
+        
+        .eye-right-1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 220px;
+            right: 155px;
+            background: #fff;
+            border-radius: 100%;
+            z-index: 6;
+        }
+        
+        .eye-right-2 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 225px;
+            right: 130px;
+            background: #fff;
+            border-radius: 100%;
+            z-index: 6;
+        }
+        
+        .eye-right-3 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 247px;
+            right: 140px;
+            background: #fff;
+            border-radius: 100%;
+            z-index: 6;
+        }
+        
+        .nose {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 270px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 5;
+            border-radius: 100%;
+            background: #333;
+        }
+        
+        .mouth-left {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            left: 145px;
+            top: 260px;
+            border: 10px solid #333;
+            border-radius: 0 0 100% 100%;
+            z-index: 3;
+        }
+        
+        .mouth-left-mask {
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            left: 140px;
+            top: 260px;
+            background: #fbd400;
+            z-index: 4;
+        }
+        
+        .mouth-right {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            right: 140px;
+            top: 260px;
+            border: 10px solid #333;
+            border-radius: 0 0 100% 100%;
+            z-index: 3;
+        }
+        /* media query */
+    </style>
+</head>
+
+<body>
+    <div class="muzi">
+        <div class="ear-left"></div>
+        <div class="ear-right"></div>
+        <div class="ear-left-inner"></div>
+        <div class="ear-right-inner"></div>
+        <div class="face"></div>
+        <div class="face-inner"></div>
+        <div class="eye-left"></div>
+        <div class="eye-left-brush1"></div>
+        <div class="eye-left-brush2"></div>
+        <div class="eye-left-brush3"></div>
+        <div class="eye-left-1"></div>
+        <div class="eye-left-2"></div>
+        <div class="eye-left-3"></div>
+        <div class="eye-right"></div>
+        <div class="eye-right-brush1"></div>
+        <div class="eye-right-brush2"></div>
+        <div class="eye-right-brush3"></div>
+        <div class="eye-right-1"></div>
+        <div class="eye-right-2"></div>
+        <div class="eye-right-3"></div>
+
+
+        <div class="nose"></div>
+        <div class="mouth-mask"></div>
+        <div class="mouth-left"></div>
+        <div class="mouth-left-mask"></div>
+        <div class="mouth-right"></div>
+        <div class="mouth-right-mask"></div>
+
+
+    </div>
+    </div>
+
+
+</body>
+
+</html>
