@@ -107,6 +107,7 @@ section .term {
     max-width: 90%;
     color: darkblue;
     margin: 0 auto;
+    left: 3%;
     line-height: 1.6;
     margin: 10px auto;
     position: relative;
@@ -133,10 +134,14 @@ section .term:after {
 
 section form {
     margin: 40px auto;
+    position: relative;
+    left: 2%;
 }
 
 section form p {
     margin-bottom: 16px;
+    position: relative;
+    left: 2%;
 }
 
 section input {
@@ -173,16 +178,22 @@ section .btn {
     color: #2458DC;
     width: 350px;
     max-width: 100%;
+    position: relative;
+    left: 1%;
 }
 
 footer h2 {
     font-size: 24px;
     font-weight: bold;
     margin: 10px 0;
+    left: 3%;
+    position: relative;
 }
 
 footer small {
     font-size: 12px;
+    left: 3%;
+    position: relative;
 }
 
 @media (max-width: 600px) {
