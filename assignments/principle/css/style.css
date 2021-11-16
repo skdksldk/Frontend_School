@@ -12,7 +12,7 @@
     font-style: normal;
 }
 
-.a11y-hidden {
+.calculation {
     overflow: hidden;
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -90,7 +90,7 @@ section {
     margin: 20px auto;
 }
 
-section .gold {
+section .practice {
     font-size: 2em;
     color: green;
     font-family: 'Vitro_core';
@@ -101,7 +101,7 @@ section .gold {
     max-width: 90%;
 }
 
-section .term {
+section .principle {
     font-size: 1.5em;
     width: 300px;
     max-width: 90%;
@@ -113,20 +113,20 @@ section .term {
     position: relative;
 }
 
-section .term::before,
-section .term::after {
+section .principle::before,
+section .principle::after {
     position: absolute;
     font-family: 'Vitro_core';
     font-size: 32px;
 }
 
-section .term:before {
+section .principle:before {
     content: '\201C';
     top: 0%;
     left: -30px;
 }
 
-section .term:after {
+section .principle:after {
     content: '\201D';
     bottom: 0%;
     right: -30px;
@@ -134,13 +134,18 @@ section .term:after {
 
 section form {
     margin: 40px auto;
+    font-family: 'Vitro_core';
+    color: rgb(131, 74, 206);
     position: relative;
     left: 2%;
 }
 
 section form p {
     margin-bottom: 16px;
+    font-family: 'Vitro_core';
+    color: rgb(131, 74, 206);
     position: relative;
+    color: dark;
     left: 2%;
 }
 
@@ -183,15 +188,17 @@ section .btn {
 }
 
 footer h2 {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
+    color: rgb(12, 12, 236);
     margin: 10px 0;
     left: 3%;
     position: relative;
 }
 
 footer small {
-    font-size: 12px;
+    font-size: 20px;
+    color: rgb(12, 12, 236);
     left: 3%;
     position: relative;
 }
