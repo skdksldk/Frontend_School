@@ -224,7 +224,7 @@ footer small {
 
 @keyframes rotate2 {
     from {
-        transform: rotate(68deg);
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
@@ -233,7 +233,7 @@ footer small {
 
 @keyframes rotate3 {
     from {
-        transform: rotate(-45deg);
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
@@ -309,7 +309,7 @@ footer small {
     margin-left: -5.5px;
     box-shadow: -10px 3px 10px rgba(0, 0, 0, 0.2);
     transform-origin: bottom center;
-    animation: rotate3 360s linear infinite;
+    animation: rotate3 190s linear infinite;
     transform: rotate(-55deg);
 }
 
@@ -321,7 +321,7 @@ footer small {
     margin-left: -3.5px;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
     transform-origin: bottom center;
-    animation: rotate2 60s linear infinite;
+    animation: rotate2 15s linear infinite;
     transform: rotate(55deg);
 }
 
@@ -335,7 +335,7 @@ footer small {
     border-radius: 10px;
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.09), inset 0 -20px 10px -7px rgba(0, 0, 0, 0.2);
     transform-origin: bottom center;
-    animation: rotate 2s linear infinite;
+    animation: rotate 1.5s linear infinite;
     transform: rotate(-95deg);
 }
 
